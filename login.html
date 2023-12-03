@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 로그인 팝업 */
+
+body {
+            font-family: Arial, sans-serif;
+            background-image: url(images/backgr.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 500px;
+            margin-inline-start: 500px;
+            margin-inline-end: 0px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: pink;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+
+        button:hover {
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <form name="loginForm" id="loginForm" action="#">
+        <div style="font-size: 30px; padding-left: -20px;">🔒Login🔐</div> <br>
+        <div class="login">
+            <label for="username">ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></label>
+            <input type="text" name="_username" id="username" placeholder="사용자아이디" required>
+            <br>
+            <label for="password">Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></label>
+            <input type="password" name="_password" id="password" placeholder="비밀번호" required>
+            <br>
+            <button type="button" id="loginButton">로그인</button>
+            <div style="padding-top: 20px; padding-left: 300px; font-size: 30px;">
+                <a href="index.html">🔙</a>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    const requestLogin = () => {
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
+
+    const userInformation = JSON.parse(localStorage.getItem('userInformation')) || [];
+
+    const foundUser = userInformation.find(user => user.username === nameValue && user.password === passwordValue);
+
+    if (foundUser) {
+        alert(`${foundUser.username} 님, 환영합니다!`);
+        // 로그인 성공 시 다음 동작 수행
+    } else {
+        alert('로그인 실패. 아이디 또는 비밀번호를 확인하세요.');
+    }
+};
+</script>
+</html>

@@ -1,8 +1,402 @@
-body{
+body {
+    margin: auto;
+    background-color: pink;
+}
+.sidebar {
+            width: 220px;
+            background-color: pink;
+            color: white;
+            height: 85.5vh;
+            box-shadow: 2px 0 5px palevioletred;
+            transition: width 0.6s ease;
+            position: fixed; /* 사이드바를 화면에 고정 */
+            top: 0; /* 화면 상단에 고정 */
+            left: 0; /* 화면 왼쪽에 고정 */
+            z-index: 10; /* 다른 요소 위에 표시되도록 설정 */
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sidebar ul li {
+            margin-bottom: auto;
+            padding: 16px;
+            border-bottom: 1px solid palevioletred;
+            /* transition: 0.3s ease; */
+            height: 50px;
+        }
+        
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 17px;
+        }
+
+        .sidebar ul li:hover {
+            background-color: palevioletred;
+        }
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    padding: 130px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 500px;
+    font-size: 20px;
+}
+.typing_eff {
+    min-width:11px;
+    white-space: nowrap;
+    margin: 0;
+    position: fixed;
+    color: transparent;
+    top:50%;
+    left:50%;
+    transform: translate(-35%, -50%);
+}
+  
+.typing_eff::before {
+    content: " Welcome to BKstagram💕💕";
+    margin-block-start: 0px;
+    margin-block-end: 1em;
+    margin-inline-start: 10px;
+    margin-inline-end: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+    border-right: 1px solid whitesmoke;
+    animation: typing 5s steps(30) infinite;
+}
+#login_etc{
+    margin-block-start: 420px;
+    margin-block-end: 1em;
+    margin-inline-start: -1290px;
+    margin-inline-end: 0px;  
+    z-index: 2000;  
+}  
+.hi{
+    margin-block-start:-96px;
+    margin-block-end: 1em;
+    margin-inline-start:-1300px;
+    margin-inline-end: 0px; 
+    z-index: 1000;   
+} 
+@keyframes typing{
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
-img{
-    width: 300px;
+footer {
+    background-color: pink;
+    color: white;
+    text-align:center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+}
+/* 자기소개 */
+.me{
+        margin-block-start: -366px;
+        margin-block-end: 1em;
+        margin-inline-start: 230px;
+        margin-inline-end: 0px;   
+        height: 600px;
+} 
+.study {
+    margin-block-start: -142px;
+    margin-block-end: 1em;
+    margin-inline-start: -290px;
+    margin-inline-end: 0px; 
+    width: 240px;  
+}
+.rock {
+    margin-block-start: -230px;
+    margin-block-end: 1em;
+    margin-inline-start: 750px;
+    margin-inline-end: 0px; 
+    width: 230px;
+    height: 204px;  
+}
+.why {
+    margin-block-start: -222px;
+    margin-block-end: 1em;
+    margin-inline-start: 240px;
+    margin-inline-end: 0px; 
+    width: 230px;
+    height: 200px;  
+}
+
+h3{
+    margin-block-start: -594px;
+    margin-block-end: 1em;
+    margin-inline-start: -10px;
+    margin-inline-end: 0px;
+    font-size: 20px;
+    color: black;
+        }
+h4{
+    color: black;
+    margin-block-start: 45px;
+    margin-block-end: 1em;
+    margin-inline-start: 440px;
+    margin-inline-end: 0px;
+    font-size: 15px;
+}  
+   
+h2{
+        margin-block-start: 10px;
+        margin-block-end: 1em;
+        margin-inline-start: 400px;
+        margin-inline-end: 0px;  
+        font-family:'Courier New', Courier, monospace;
+        font-weight: lighter;
+        color: black;
+        font-size: 16px;
+}
+div#gallery{
+    margin:0 auto;
+    border: 10px solid white; /* 굵은테두리*/
+    background: white; /* 배경색*/
+    margin-block-start: -264px;
+    margin-block-end: 1em;
+    margin-inline-start: 200px;
+    margin-inline-end: 0px;
+}
+div#gallery ul li{
+    position:relative;
+    list-style:none;
+    float:left;
+    margin:0 10px 10px 0;
+}
+div#gallery ul li img.small{
+    width:230px;
+    height:190px;
+    cursor:pointer;
+}
+div#gallery ul li img.pic{
+    position:absolute;
+    left:120px;
+    top:-180px;
+    width:320px;
+    height:240px;
+    border:4px solid black;
+    z-index:10;
+    
+    visibility:hidden;
+}
+/* 작은사진, 확대사진에 hover시 모두 보여줌. */
+div#gallery ul li img.small:hover+img.pic, div#gallery ul li img.pic:hover{
+visibility:visible;
+}
+
+.instafeed{
+    margin-block-start:-365px;
+    margin-block-end: 1em;
+    margin-inline-start: 230px;
+    margin-inline-end: 0px;   
+    width: 900px;
+    height: 600px;
+}
+.travel-right-wrap {
+    margin-block-start: -600px;
+    margin-block-end: 1em;
+    margin-inline-start: -130px;
+    margin-inline-end: 0px;   
+    width: 50%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.travel-right-wrap .travel-img-wrap {
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+}
+.travel-right-wrap .travel-img-wrap .travel-img-wrap-full {
+    width: fit-content;
+    display: flex;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+.travel-right-wrap .travel-img-wrap section {
+    width:600px;
+    height: 500px;
+}
+.travel-right-wrap .travel-img-wrap section img {
+    width: 70%;
+}
+
+.img-slider-btn-wrap {
+    width: 750px;
+    height: 50px;
+
+}
+.img-slider-btn-wrap ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-slider-btn-wrap li {
+    cursor: pointer;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
+    background-color: black;
+    margin-block-start: -6px;
+}
+.img-slider-btn-wrap li:first-child {
+    background-color: silver;
+}
+.b{
+    margin-block-start: -620px;
+    margin-block-end: 1em;
+    margin-inline-start: 654px;
+    margin-inline-end: 0px;
+    font-size: 16px;
+    color: black;
+}
+.c{
+    margin-block-start: -280px;
+    margin-block-end: 1em;
+    margin-inline-start: 750px;
+    margin-inline-end: 0px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 14.8px;
+}
+.a{
+    margin-block-start: 70px;
+    margin-block-end: 1em;
+    margin-inline-start: 756px;
+    margin-inline-end: 0px;
+    font-size: 14.5px;
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+}
+#heartContainer {
+    display: none;
+    font-size: 30px;
+    color: red;
+    margin-block-start: -48px;
+    margin-block-end: 1em;
+    margin-inline-start: 580px;
+    margin-inline-end: 0px;
+  }
+#heartButton {
+    margin-block-start: 20px;
+    margin-block-end: 1em;
+    margin-inline-start: 480px;
+    margin-inline-end: 0px;
+    cursor: pointer;
+}
+
+.instastories{
+        margin-block-start: -358px;
+        margin-block-end: 1em;
+        margin-inline-start: -540px;
+        margin-inline-end: 0px;   
+        height: 600px; 
+}
+.hellomk{
+    margin-block-start: -476px;
+    margin-block-end: 1em;
+    margin-inline-start: -523px;
+    margin-inline-end: 0px;   
+    height: 400px; 
+}
+.instadm1{
+    margin-block-start: -480px;
+    margin-block-end: 1em;
+    margin-inline-start: 170px;
+    margin-inline-end: 0px;   
+    height: 480px;
+    width: 340px;
+}
+.instadm2{
+    margin-block-start: -500px;
+    margin-block-end: 1em;
+    margin-inline-start: 900px;
+    margin-inline-end: 0px;   
+    height: 480px;
+    width: 340px;
+}
+.fullstack{
+    margin-block-start: -480px;
+    margin-block-end: 1em;
+    margin-inline-start: 440px;
+    margin-inline-end: 0px;   
+}
+.fullstack1{
+    margin-block-start: 26px;
+    margin-block-end: 1em;
+    margin-inline-start: 450px;
+    margin-inline-end: 0px;   
+}
+#dmclick{
+    margin-block-start:180px;
+    margin-block-end: 1em;
+    margin-inline-start: -440px;
+    margin-inline-end: 0px;  
+    background-color: palevioletred;
+    cursor: pointer;
+}
+#font{
+    color: black;
+    font-size: 13.4px;
+    margin-block-start:-212px;
+    margin-block-end: 1em;
+    margin-inline-start: 160px;
+    margin-inline-end: 0px;
+}
+#back{
+    color: black;
+    font-size: 13.4px;
+    margin-block-start:-313px;
+    margin-block-end: 1em;
+    margin-inline-start: 900px;
+    margin-inline-end: 0px;
+}
+#users{
+    width: 800px;
+    border: 1px solid ;
+    border-collapse: collapse;
+    margin-left: 24%;
+}
+#users > thead > tr > th{
+    border: 3px solid palevioletred;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0;
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+}
+#users > tbody > tr > td{
+    border: 3px solid palevioletred;
+    border-collapse: collapse;
 }
